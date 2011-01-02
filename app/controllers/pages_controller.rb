@@ -11,4 +11,4 @@ class PagesController < ApplicationController
     @title = "About"
   end 
 
-end
+end 
