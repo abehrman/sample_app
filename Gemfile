@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-
 gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'gravatar_image_tag'
 
 group :development do
 	gem 'rspec-rails'
@@ -16,4 +16,5 @@ group :test do
 	gem 'spork'
 	gem 'growl'
 	gem 'guard-spork'
+	gem 'factory_girl_rails'
 end
