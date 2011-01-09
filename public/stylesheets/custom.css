@@ -177,3 +177,14 @@ div.field, div.actions {
 	font-size: 12px;
 	list-style: square;
 }
+
+#auction_grid td {
+	width: 33%;
+	padding:20px;
+}
+
+.auction_tile {
+	width:150px;
+	height:150px;
+	border: 2px solid black;
+}
