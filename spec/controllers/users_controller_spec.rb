@@ -148,7 +148,7 @@ describe UsersController do
   describe "PUT 'update'" do
     before(:each) do
       @user = Factory(:user)
-      test_signin_in(@user)
+      test_sign_in(@user)
     end
     
     describe "failure" do
@@ -192,4 +192,13 @@ describe UsersController do
       end
     end
   end
+
+  descript "authentication of edit/update pages" do
+    before(:each) do
+      @user = Factory(:user)
+    end
+    
+    describe "for non-signed-in-users" do
+      get :edit, :id => @user
+      response.should redirect_to(signin_path)
 end
