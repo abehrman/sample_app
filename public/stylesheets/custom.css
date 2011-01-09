@@ -178,13 +178,10 @@ div.field, div.actions {
 	list-style: square;
 }
 
-#auction_grid td {
-	width: 33%;
-	padding:20px;
+ul.users {
+	margin-top: 1em;
 }
 
-.auction_tile {
-	width:150px;
-	height:150px;
-	border: 2px solid black;
+.users li {
+	list-style: none;
 }
