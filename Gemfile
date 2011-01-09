@@ -20,6 +20,8 @@ group :test do
 	gem 'spork'
 	gem 'growl'
 	gem 'guard-spork'
+	gem 'guard-rspec'
+	gem 'guard-bundler'
 	gem 'factory_girl_rails'
 	gem 'faker'
 end
