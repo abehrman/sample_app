@@ -10,19 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110109160238) do
+ActiveRecord::Schema.define(:version => 20110110010457) do
 
   create_table "auctions", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.decimal  "startbid"
-    t.decimal  "currentbid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "AuctionEnd"
+    t.integer  "created_by_id"
+    t.decimal  "subsidy"
+    t.decimal  "fees"
+    t.datetime "end_time"
+    t.decimal  "current_offer"
+    t.decimal  "current_offerer"
+    t.decimal  "current_bid"
+    t.decimal  "current_bidder"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "description"
   end
 
   create_table "microposts", :force => true do |t|

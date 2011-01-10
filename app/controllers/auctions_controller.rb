@@ -16,7 +16,15 @@ class AuctionsController < ApplicationController
   end
    
   def create
-    @auction = Auction.create(params[:auction])
-    render :show 
+  @auction = current_user.auctions.build(params[:auction])
+  @user = current_user
+  @auction.current_offerer
+  @auction.subsidy = 0.50
+  @auction.fees = 0.10
+    if @auction.save
+      flash[:success] = "Auction created!"
+      redirect_to auction_path 
+    end
   end
+  
 end
