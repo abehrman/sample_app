@@ -1,4 +1,4 @@
-# A sample Guardfile
+# A Youlika Guardfile
 # More info at http://github.com/guard/guard#readme
 
 guard 'spork', :wait => 40 do

@@ -9,3 +9,27 @@
 	height:150px;
 	border: 2px solid black;
 }
+
+div#auction_countdown_timer {
+    float: left;
+	width: 200px;
+    text-rendering: optimizelegibility;
+	position:relative;
+	margin:40px 75px 0px 100px;
+}
+
+div#auction_countdown_timer span {
+	font-size:24px;
+	color: green;
+}
+
+table#auction_table {
+	width:300px;
+	position:relative;
+	left:300px;
+}
+
+table#auction_table td {
+	text-align:center;
+	width:50px;
+}

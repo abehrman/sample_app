@@ -1,10 +1,15 @@
 <h1>Sign up</h1>
 
-<% form_for @auction, :html => { :multipart => true } do |f| %>
+<% form_for(@auction, :html => { :multipart => true }) do |f| %>
 	<%= render 'shared/error_messages', :object => f.object %>
 	<div class="field">
 		<%= f.label :title %><br />
 		<%= f.text_field :title %>
+		<div class="end_time_calendar">
+			 <%= f.label :end_time, "Auction End Date/Time" %>
+			 <%= f.calendar_date_select :end_time, :embedded => "true" %>
+		</div>
+		
 	</div>
 	<div class="field">
 		<%= f.label :description %><br />
@@ -15,10 +20,11 @@
 		<%= f.text_field :current_offer %>
 	</div>
 	<div class="field">
-		<%= f.label :photo, "Upload image" %>
+		<%= f.label :photo, "Upload image" %><br />
 		<%= f.file_field :photo %>
 	</div>
 	<div class="actions">
 		<%= f.submit "Submit" %>
 	</div>
+	
 <% end %>

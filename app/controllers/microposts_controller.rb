@@ -19,8 +19,8 @@ class MicropostsController < ApplicationController
   end
   
   private
-    def authorized_user
-      @micropost = Micropost.find(params[:id])
-      redirect_to root_path unless current_user?(@micropost.user)
-    end
+  def authorized_user
+    @micropost = Micropost.find(params[:id])
+    redirect_to root_path unless current_user?(@micropost.user)
+  end
 end

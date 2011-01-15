@@ -1,14 +1,14 @@
 <h1>All Auctions</h1>
 
 <table id="auction_grid">
-	<% @auctions.in_groups_of(3,false) do |row_auctions| %>
+	<% @auction.in_groups_of(3,false) do |row_auctions| %>
 		<tr>
 			<% for auction in row_auctions %>
 				<td>
 					<div class="auction_tile">
 						<%= auction.title %><br />
 						<%= auction.description %>
-						<%= image_tag auction.photo.url %>
+						<%= link_to image_tag(auction.photo.url(:small)), auction %>
 					</div>
 				</tdv>
 			<% end %>
@@ -16,7 +16,7 @@
 	<% end %>
 </table>
 
-<%= button_to "New Auction", {:action => "new"} %>
+<%= button_to "New Auction", new_auction_path, :method => :get %>
 
 								
 				

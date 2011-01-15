@@ -118,7 +118,7 @@ describe UsersController do
       
       it "should have a welcome message" do
         post :create, :user => @attr
-        flash[:success].should =~ /welcome to the sample app/i
+        flash[:success].should =~ /welcome to the Youlika app/i
       end 
       
       it "should sign the user in" do

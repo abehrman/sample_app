@@ -1,4 +1,19 @@
-<%= image_tag @auction.photo.url %>
-<%= image_tag @auction.photo.url(:thumb) %>
+<h1><%= @auction.title %></h1>
 
-<%= link_to "New Auction", auction_path %>
+<div>
+<%= image_tag @auction.photo.url(:large) %>
+<% left_pos = 900 %>
+	<div id="auction_countdown_timer"></div>
+		<input type="hidden" id="end_time" 
+		value="<%= @end_time.strftime("%B %d, %Y %H:%M:%S") %>">     
+	</div>
+	
+	<div id="auction">
+		<%= render :partial => "update_bids_offers"%>
+	</div>
+									
+<% if current_user?(@auction.user) %>
+	<%= link_to "delete", @auction, :method => :delete,
+									 :confirm => "You sure?" %>
+<% end %>
+<%= button_to "New Auction", new_auction_path, :method => :get %>
