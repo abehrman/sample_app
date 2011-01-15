@@ -1,0 +1,14 @@
+<table id="auction_table">
+	<tr>
+		<td>Bid</td>
+		<td>Offer</td>
+	</tr>
+	<tr>
+		<td id="highest_bid"><%= @auction.current_bid %></td>
+		<td id="highest_offer"><%= @auction.current_offer %></td>
+	</tr>
+	<tr>
+		<td id="highest_bidder"><%= @auction.current_bidder %></td>
+		<td id="highest_offerer"><%= User.find(@auction.current_offerer).name %></td>
+	</tr>		
+</table>
