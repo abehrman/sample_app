@@ -6,8 +6,6 @@ gem 'gravatar_image_tag'
 gem 'will_paginate', '3.0.pre2'
 gem 'rmagick'
 gem 'paperclip'
-gem 'calendar_date_select', :git => 'http://github.com/paneq/calendar_date_select.git', :branch => 'rails3test'
-
 
 group :development do
 	gem 'rspec-rails'
