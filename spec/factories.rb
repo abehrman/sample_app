@@ -14,3 +14,14 @@ Factory.define :micropost do |micropost|
   micropost.content "Foo bar"
   micropost.association :user
 end
+
+Factory.define :auction do |auction|
+  auction.user_id       1
+  auction.subsidy       0
+  auction.fees          0
+  auction.end_time      "January 1, 2010 12:00:00 PM"
+  auction.current_offer 100
+  auction.current_offerer 1
+  auction.title         "Junk"
+  auction.description   "Random junk"
+end
