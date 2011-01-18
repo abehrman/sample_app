@@ -1,0 +1,2 @@
+class BidsOffersController < ApplicationController
+end

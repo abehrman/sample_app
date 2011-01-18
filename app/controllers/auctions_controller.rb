@@ -5,6 +5,11 @@ class AuctionsController < ApplicationController
   def index
     @title = "All Auctions"
     @auction = Auction.all
+    counter = 0
+    @auction.each do |id|
+      @auction_ids[counter] = id.id
+      counter = counter + 1
+    end
   end
   
   def new
@@ -16,6 +21,7 @@ class AuctionsController < ApplicationController
     @title = "View auction"
     @auction = Auction.find(params[:id])
     @end_time = @auction.end_time
+    
   end
   
 

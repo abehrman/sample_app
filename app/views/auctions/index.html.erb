@@ -4,18 +4,22 @@
 	<% @auction.in_groups_of(3,false) do |row_auctions| %>
 		<tr>
 			<% for auction in row_auctions %>
-				<td>
-					<div class="auction_tile">
+			
+			<%# @auction_ids << "auction_" %>
+			
+				<td>	
+					<div class="auction_tile" id="auction_<%=auction.id%>">
 						<%= auction.title %><br />
-						<%= auction.description %>
 						<%= link_to image_tag(auction.photo.url(:small)), auction %>
+						<input type="hidden" id="end_time" 
+							value="<%= auction.end_time.strftime("%B %d, %Y %H:%M:%S") %>">     		
 					</div>
 				</tdv>
 			<% end %>
 		</tr>
 	<% end %>
 </table>
-
+<%= @auction_ids %>
 <%= button_to "New Auction", new_auction_path, :method => :get %>
 
 								
